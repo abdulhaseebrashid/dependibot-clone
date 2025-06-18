@@ -1,0 +1,226 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #f2f2f2;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.header--scrolled {
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  border-bottom-color: #e5e7eb;
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  min-height: 80px;
+}
+
+/* Logo */
+.header__logo {
+  flex-shrink: 0;
+}
+
+.logo-image {
+  height: 150px; /* Made bigger from 120px */
+  width: auto;
+  object-fit: contain;
+  margin-top: -1px;
+  margin-right: -7px;
+}
+
+/* Desktop Navigation */
+.header__nav {
+  display: none;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem; /* Reduced space between nav items */
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  color: #1a202c;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.nav__link:hover {
+  color: #2196F3;
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #1e88e5;
+  transition: width 0.3s ease;
+}
+
+.nav__link:hover::after {
+  width: 100%;
+}
+
+/* CTA Button */
+.header__cta {
+  display: none;
+}
+
+.header__cta .btn {
+  padding: 1rem 2rem; /* Changed to match hero button size */
+  background-color: #1e88e5; /* Same color as hero button */
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1.125rem; /* Match hero button font size */
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Black shadow */
+  transition: background-color 0.3s ease; /* Only background color transition */
+  margin-bottom: 12px;
+  
+}
+
+.header__cta .btn:hover {
+  background-color: #000000; /* Black on hover */
+  color: #ffffff; /* Keep text white */
+  /* No movement animations */
+}
+
+/* Mobile Menu Toggle */
+.header__mobile-toggle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.header__mobile-toggle span {
+  width: 24px;
+  height: 2px;
+  background-color: #1a202c;
+  transition: all 0.2s ease;
+}
+
+/* Mobile Menu */
+.header__mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav {
+  padding: 1rem 0;
+}
+
+.mobile-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile-nav__item {
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.mobile-nav__item:last-child {
+  border-bottom: none;
+}
+
+.mobile-nav__link {
+  display: block;
+  padding: 0.75rem 1.5rem; /* Reduced padding for less space */
+  color: #1a202c;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.mobile-nav__link:hover {
+  background-color: #f9fafb;
+  color: #1e88e5;
+}
+
+.mobile-nav__cta {
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+
+.mobile-nav__cta .btn {
+  padding: 1rem 2rem; /* Changed to match hero button size */
+  background-color: #1e88e5; /* Same color as hero button */
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1.125rem; /* Match hero button font size */
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Black shadow */
+  transition: background-color 0.3s ease; /* Only background color transition */
+}
+
+.mobile-nav__cta .btn:hover {
+  background-color: #000000; /* Black on hover */
+  color: #ffffff; /* Keep text white */
+  /* No movement animations */
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+  .header__nav {
+    display: block;
+  }
+  
+  .header__cta {
+    display: block;
+  }
+  
+  .header__mobile-toggle {
+    display: none;
+  }
+  
+  .header__mobile-menu {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__content {
+    padding: 1.25rem 0;
+    margin-bottom: -20px;
+  }
+  
+  .logo-image {
+    height: 170px; /* Made bigger from 140px */
+  }
+  
+  .nav__list {
+    gap: 2.5rem; /* Reduced space between nav items on desktop */
+    margin-bottom: 8px;
+  }
+}

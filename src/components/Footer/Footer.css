@@ -1,0 +1,332 @@
+.footer {
+  background: black;
+  color: #ffffff;
+  padding: 4rem 0 2rem;
+  position: relative;
+}
+
+.footer__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* Left Section - Logo and Badge */
+.footer__left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.footer__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.logo-image {
+  height: 75px;
+  width: auto;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.logo__tagline {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #b8c5d1;
+  letter-spacing: 0.1em;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.footer__badge {
+  position: relative;
+}
+
+.badge-image {
+  height: 145px;
+  margin-left: 20%;
+  margin-top: 2%;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Fallback Icon (same as Expertise) */
+.fallback-icon {
+  display: none;
+  width: 45px;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #2196f3;
+  border-radius: 8px;
+}
+
+.fallback-icon-text {
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Middle Section - Quick Links */
+.footer__middle {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  /* Updated: Made line even shorter */
+  position: relative;
+  padding-bottom: 0.5rem;
+  font-size: 170%;
+}
+
+.footer__heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30%; /* Made even shorter - 30% instead of 50% */
+  height: 2px;
+  background-color: #2196f3;
+}
+
+.footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer__links li a {
+  color: #b8c5d1;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  transition: color 0.3s ease;
+}
+
+.footer__links li a:hover {
+  color: #2196f3;
+}
+
+/* Right Section - Contact Info */
+.footer__right {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.contact-icon-image {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  /* Simple approach: Use a direct blue color overlay */
+  filter: brightness(0) invert(1);
+  color: #2196f3;
+}
+
+/* Alternative approach - if the above doesn't work, we'll use this */
+.contact-icon-image {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  /* Specific filter for #2196f3 blue color */
+  filter: invert(30%) sepia(100%) saturate(2000%) hue-rotate(200deg) brightness(100%) contrast(100%);
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.contact-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #ffffff;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.contact-value {
+  font-size: 0.875rem;
+  color: #b8c5d1;
+  line-height: 1.4;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Bottom Section */
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  border-top: 1px solid #2d3748;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer__copyright {
+  font-size: 0.875rem;
+  color: #b8c5d1;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.copyright-link {
+  color: #2196f3;
+  font-weight: 600;
+}
+
+.footer__social {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: #2196f3;
+  transform: translateY(-2px);
+}
+
+.social-icon {
+  font-size: 1.25rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .footer__content {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .footer__right {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 0 1.5rem;
+  }
+
+  .footer__content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer__left {
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer__middle {
+    text-align: center;
+  }
+
+  .footer__right {
+    text-align: center;
+  }
+
+  .contact-item {
+    justify-content: center;
+    text-align: left;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .logo-image {
+    height: 50px;
+  }
+
+  .badge-image {
+    height: 60px;
+  }
+
+  /* Center the lines on mobile */
+  .footer__heading::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 2rem 0 1rem;
+  }
+
+  .footer__content {
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .logo-image {
+    height: 40px;
+  }
+
+  .badge-image {
+    height: 50px;
+  }
+
+  .contact-icon-image {
+    width: 20px;
+    height: 20px;
+  }
+}

@@ -1,0 +1,221 @@
+.contact {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    position: relative;
+  }
+  
+  .contact__content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Header */
+  .contact__header {
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .contact__badge {
+    display: inline-block;
+    background-color: rgba(33, 150, 243, 0.1);
+    color: var(--primary-blue);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+  }
+  
+  .contact__title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: var(--font-weight-bold);
+    color: var(--dark-text);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+  
+  .contact__description {
+    font-size: 1.125rem;
+    color: var(--light-text);
+    line-height: 1.7;
+  }
+  
+  /* Main Wrapper */
+  .contact__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+  
+  /* Contact Info */
+  .contact__info {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-light);
+    border: 1px solid var(--border-gray);
+  }
+  
+  .contact__info-header h3 {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-semibold);
+    color: var(--dark-text);
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact__info-header p {
+    color: var(--light-text);
+    margin-bottom: 2rem;
+  }
+  
+  .contact__benefits {
+    margin-bottom: 2rem;
+  }
+  
+  .benefit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .benefit-item__icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+  }
+  
+  .benefit-item__content h4 {
+    font-size: 1rem;
+    font-weight: var(--font-weight-semibold);
+    color: var(--dark-text);
+    margin-bottom: 0.25rem;
+  }
+  
+  .benefit-item__content p {
+    font-size: 0.875rem;
+    color: var(--light-text);
+    line-height: 1.5;
+  }
+  
+  .contact__details {
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-gray);
+  }
+  
+  .contact__detail {
+    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+    color: var(--light-text);
+  }
+  
+  .contact__detail strong {
+    color: var(--dark-text);
+  }
+  
+  /* Contact Form */
+  .contact__form-wrapper {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-light);
+    border: 1px solid var(--border-gray);
+  }
+  
+  .contact__form {
+    width: 100%;
+  }
+  
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: var(--font-weight-medium);
+    color: var(--dark-text);
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--border-gray);
+    border-radius: 8px;
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    transition: all var(--transition-fast);
+    background-color: var(--white);
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  .form-submit {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .form-success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: var(--font-weight-medium);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .contact {
+      padding: 4rem 0;
+    }
+    
+    .contact__wrapper {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    .contact__info,
+    .contact__form-wrapper {
+      padding: 2rem;
+    }
+    
+    .form-row {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact__info,
+    .contact__form-wrapper {
+      padding: 1.5rem;
+    }
+  }

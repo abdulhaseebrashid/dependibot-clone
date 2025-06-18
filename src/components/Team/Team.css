@@ -1,0 +1,315 @@
+.team {
+  padding: 0;
+  position: relative;
+}
+
+/* Main Technologies Section */
+.team__main-section {
+  background: white;
+  padding: 6rem 0;
+  position: relative;
+}
+
+.team__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Header */
+.team__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.team__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  line-height: 1.2;
+  margin: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Technologies Grid */
+.technologies-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+.tech-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-icon {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  /* Removed background and border */
+  padding: 1rem;
+}
+
+.tech-icon-image {
+  width: 230px;
+  height: 230px;
+  object-fit: contain;
+  max-width: 170%;
+  max-height: 180%;
+}
+
+/* Fallback Icon (same as Expertise) */
+.fallback-icon {
+  display: none;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #2196f3;
+  border-radius: 8px;
+}
+
+.fallback-icon-text {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* CTA Section */
+.team__cta-section {
+  background: linear-gradient(135deg, #2196f3, #1976d2);
+  padding: 4rem 0;
+  position: relative;
+}
+
+.cta-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.cta-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.cta-text {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+  flex: 1;
+  min-width: 300px;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.cta-call {
+  text-align: center;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  line-height: 19px;
+}
+
+.cta-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 165%;
+  font-weight: bolder;
+}
+
+.cta-phone {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 165%;
+  font-weight: bolder;
+}
+
+/* Added OR text styling */
+.cta-or {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0.5rem 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: white;
+  font-size: 165%;
+  font-weight: bolder;
+}
+
+.cta-button {
+  background: white;
+  color: black;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  flex-shrink: 0;
+}
+
+.cta-button:hover {
+  background: black;
+  color: white;
+  /* Removed transform and box-shadow */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .tech-row {
+    gap: 3rem;
+  }
+
+  .tech-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .tech-icon-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .fallback-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .fallback-icon-text {
+    font-size: 16px;
+  }
+
+  .cta-text {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .team__main-section {
+    padding: 4rem 0;
+  }
+
+  .team__title {
+    font-size: 2rem;
+  }
+
+  .technologies-grid {
+    gap: 2rem;
+  }
+
+  .tech-row {
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .tech-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .tech-icon-image {
+    width: 40px;
+    height: 40px;
+  }
+
+  .fallback-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .fallback-icon-text {
+    font-size: 14px;
+  }
+
+  .cta-info {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .cta-text {
+    font-size: 1.5rem;
+    min-width: auto;
+  }
+
+  .cta-title {
+    font-size: 1.25rem;
+  }
+
+  .cta-phone {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team__main-section {
+    padding: 3rem 0;
+  }
+
+  .team__title {
+    font-size: 1.75rem;
+  }
+
+  .tech-row {
+    gap: 1.5rem;
+  }
+
+  .tech-icon {
+    width: 50px;
+    height: 50px;
+    padding: 0.75rem;
+  }
+
+  .tech-icon-image {
+    width: 35px;
+    height: 35px;
+  }
+
+  .fallback-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .fallback-icon-text {
+    font-size: 12px;
+  }
+
+  .cta-text {
+    font-size: 1.25rem;
+  }
+
+  .cta-button {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
