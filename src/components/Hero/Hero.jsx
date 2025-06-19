@@ -30,7 +30,7 @@ const Hero = () => {
             </div>
             
             <div className="hero__cta">
-              <button className="btn btn--primary btn--large">
+              <button className="hero__btn hero__btn--primary hero__btn--large">
                 Let's Connect
               </button>
             </div>

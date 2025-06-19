@@ -102,6 +102,49 @@
   margin-left: 2rem;
 }
 
+/* HERO-SPECIFIC BUTTON STYLES */
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.3s ease; /* Only background color transition */
+}
+
+.hero__btn--primary {
+  background-color: #1e88e5; /* Changed to match header button color */
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero__btn--primary:hover {
+  background-color: #000000; /* Black on hover */
+  color: #ffffff; /* Keep text white */
+  /* No movement animations */
+}
+
+.hero__btn--large {
+  padding: 1rem 2rem;
+  font-size: 16px;
+  display: inline-block;
+  box-sizing: border-box;
+  visibility: visible;
+  font-family: var(--headlinefont);
+  font-weight: 700;
+  text-shadow: 0 0 0 transparent;
+  text-align: center;
+  line-height: unset !important;
+  position: relative;
+  right: 30px;
+}
+
+/* ORIGINAL BUTTON STYLES (for other sections) */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -303,8 +346,6 @@
   word-wrap: break-word;
 }
 
-
-
 .hero__description p {
   margin-top: 1px;
   margin-left: -30px;
@@ -334,4 +375,3 @@
   word-spacing: 0px;
   line-height: 61px;
 }
-
