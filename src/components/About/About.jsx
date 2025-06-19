@@ -1,7 +1,8 @@
 import "./About.css"
 
-// Import SVG icon using your preferred pattern
+// Import SVG icons
 import icon1 from "../../assets/images/icons/service-icons/aboutusIcon.webp"
+import tickIcon from "../../assets/images/icons/social-icons/tick.svg"
 
 const About = () => {
   // Fallback icon component (same as your other components)
@@ -66,21 +67,60 @@ const About = () => {
                   With more than 15 years of industry experience, Dependibot was born out of a passion for technology
                   and a desire to make a positive impact on the digital world. Over the years, we have grown into a
                   dynamic team of creative thinkers, problem solvers, and tech enthusiasts who are driven by a common
-                  goal - to create exceptional code and digital experiences.
+                  goal – to create exceptional code and digital experiences.
                 </p>
               </div>
 
               <div className="about__features">
                 <div className="feature-item">
-                  <div className="feature-check">✓</div>
+                  <div className="feature-check">
+                    <img
+                      src={tickIcon || "/placeholder.svg"}
+                      alt="Check"
+                      className="tick-icon"
+                      onError={(e) => {
+                        e.target.style.display = "none"
+                        const fallbackSpan = document.createElement("span")
+                        fallbackSpan.innerHTML = "✓"
+                        fallbackSpan.className = "tick-fallback"
+                        e.target.parentElement.appendChild(fallbackSpan)
+                      }}
+                    />
+                  </div>
                   <span>We work with startups to large corporations</span>
                 </div>
                 <div className="feature-item">
-                  <div className="feature-check">✓</div>
+                  <div className="feature-check">
+                    <img
+                      src={tickIcon || "/placeholder.svg"}
+                      alt="Check"
+                      className="tick-icon"
+                      onError={(e) => {
+                        e.target.style.display = "none"
+                        const fallbackSpan = document.createElement("span")
+                        fallbackSpan.innerHTML = "✓"
+                        fallbackSpan.className = "tick-fallback"
+                        e.target.parentElement.appendChild(fallbackSpan)
+                      }}
+                    />
+                  </div>
                   <span>We can supplement your Tech team or be your Tech team</span>
                 </div>
                 <div className="feature-item">
-                  <div className="feature-check">✓</div>
+                  <div className="feature-check">
+                    <img
+                      src={tickIcon || "/placeholder.svg"}
+                      alt="Check"
+                      className="tick-icon"
+                      onError={(e) => {
+                        e.target.style.display = "none"
+                        const fallbackSpan = document.createElement("span")
+                        fallbackSpan.innerHTML = "✓"
+                        fallbackSpan.className = "tick-fallback"
+                        e.target.parentElement.appendChild(fallbackSpan)
+                      }}
+                    />
+                  </div>
                   <span>We can build, rebuild, or remodel your current systems</span>
                 </div>
               </div>

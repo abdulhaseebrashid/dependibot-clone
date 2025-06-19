@@ -2,7 +2,7 @@
   padding: 0;
   position: relative;
   overflow: hidden;
-  min-height: 600px;
+  min-height: 450px; /* REDUCED from 600px */
 }
 
 .why-us__background {
@@ -11,7 +11,7 @@
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  min-height: 600px;
+  min-height: 450px; /* REDUCED from 600px */
   display: flex;
   align-items: center;
 }
@@ -29,12 +29,19 @@
   margin-left: 100%;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
 .why-us__content {
   position: relative;
   z-index: 2;
   width: 100%;
-  min-height: 500px;
-  padding: 4rem 0;
+  min-height: 350px; /* REDUCED from 500px */
+  padding: 3rem 0; /* REDUCED from 4rem */
   display: flex;
   flex-direction: column;
 }
@@ -42,8 +49,8 @@
 /* Header at Top - Centered */
 .why-us__header {
   text-align: center;
-  margin-bottom: 3rem;
-  color: var(--dark-text);
+  margin-bottom: 2.5rem;
+  color: black;
 }
 
 .why-us__title {
@@ -55,17 +62,19 @@
 }
 
 .why-us__title .highlight {
-  color: var(--primary-blue);
+  color: #1784e9;
   font-style: italic;
 }
 
 .why-us__subtitle {
-  font-size: 1.25rem;
+  font-size: 24px;
   color: var(--dark-text);
   font-weight: var(--font-weight-medium);
   margin: 0;
-  margin-right: 415px;
+  margin-right: 523px;
+  font-weight: bolder;
   filter: brightness(00.5%);
+  line-height: 17px;
 }
 
 /* Features Below Header - Right Side of Background */
@@ -76,13 +85,15 @@
   margin-right: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem; /* REDUCED from 2rem for tighter spacing */
 }
 
 .feature-block {
   display: flex;
   align-items: flex-start;
   gap: 1.5rem;
+  position: relative;
+  right: 58%;
 }
 
 .feature-block__icon {
@@ -188,12 +199,20 @@
 }
 
 @media (max-width: 768px) {
+  .why-us {
+    min-height: 400px; /* REDUCED for mobile */
+  }
+
+  .why-us__background {
+    min-height: 400px; /* REDUCED for mobile */
+  }
+
   .why-us__content {
-    padding: 3rem 0;
+    padding: 2.5rem 0; /* REDUCED from 3rem */
   }
 
   .why-us__header {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem; /* REDUCED from 2.5rem */
   }
 
   .why-us__features {
@@ -231,11 +250,11 @@
 
 @media (max-width: 480px) {
   .why-us {
-    min-height: 500px;
+    min-height: 350px; /* REDUCED from 500px */
   }
 
   .why-us__background {
-    min-height: 500px;
+    min-height: 350px; /* REDUCED from 500px */
   }
 
   .why-us__content {
@@ -243,7 +262,7 @@
   }
 
   .why-us__header {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem; /* REDUCED from 2rem */
   }
 
   .feature-block {

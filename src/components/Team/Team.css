@@ -6,7 +6,7 @@
 /* Main Technologies Section */
 .team__main-section {
   background: white;
-  padding: 6rem 0;
+  padding: 3rem 0;
   position: relative;
 }
 
@@ -23,34 +23,40 @@
 }
 
 .team__title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #2d3748;
+  font-size: 28px;
+  font-weight: 500px;
+  color: black;
   line-height: 1.2;
   margin: 0;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, .4);
+  font-family: var(--headlinefont);
 }
 
-/* Technologies Grid */
+/* Technologies Grid - FIXED */
 .technologies-grid {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 4rem;
   align-items: center;
+  width: 100%;
 }
 
 .tech-row {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
-  flex-wrap: wrap;
+  gap: 3rem;
+  width: 100%;
+  max-width: 1000px;
+  flex-wrap: nowrap;
 }
 
 .tech-item {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 0 0 auto;
 }
 
 .tech-icon {
@@ -60,23 +66,21 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  /* Removed background and border */
-  padding: 1rem;
 }
 
 .tech-icon-image {
-  width: 230px;
-  height: 230px;
+  width: 90px;
+  height: 90px;
   object-fit: contain;
-  max-width: 170%;
-  max-height: 180%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
-/* Fallback Icon (same as Expertise) */
+/* Fallback Icon */
 .fallback-icon {
   display: none;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -96,8 +100,8 @@
 
 /* CTA Section */
 .team__cta-section {
-  background: linear-gradient(135deg, #2196f3, #1976d2);
-  padding: 4rem 0;
+  background: linear-gradient(135deg, #1784e9, #1976d2);
+  padding: 2rem 0;
   position: relative;
 }
 
@@ -117,12 +121,16 @@
 }
 
 .cta-text {
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 28px !important;
+  font-weight: 500;
   margin: 0;
-  flex: 1;
+  flex: 1 1;
   min-width: 300px;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  text-shadow: 0 0 0 0 transparent;
+  line-height: 1.3rem;
+  letter-spacing: 0;
+  text-align: left;
 }
 
 .cta-call {
@@ -132,35 +140,42 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  line-height: 19px;
 }
 
 .cta-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin: 0;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 165%;
-  font-weight: bolder;
-}
-
-.cta-phone {
-  font-size: 1.25rem;
+  font-size: 25px;
   font-weight: 500;
   margin: 0;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-size: 165%;
+  text-align: center;
+  text-shadow: 0 0 0 0 transparent;
+  line-height: 1.3rem;
   font-weight: bolder;
 }
 
-/* Added OR text styling */
+
+
+.cta-phone {
+  font-size: 25px !important;
+  font-weight: 500;
+  margin: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  text-shadow: 0 0 0 transparent;
+  line-height: 1.3rem;
+  font-weight: bolder;
+  position: relative;
+  top: -1.8px;
+}
+
 .cta-or {
-  font-size: 1rem;
+  font-size: 24px !important;
   font-weight: 500;
   margin: 0.5rem 0;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   color: white;
-  font-size: 165%;
+  text-shadow: 0 0 0 transparent;
+  line-height: 1.3rem;
+  text-align: center;
   font-weight: bolder;
 }
 
@@ -175,19 +190,19 @@
   cursor: pointer;
   transition: all 0.3s ease;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  flex-shrink: 0;
 }
 
 .cta-button:hover {
   background: black;
   color: white;
-  /* Removed transform and box-shadow */
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
   .tech-row {
-    gap: 3rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .tech-icon {
@@ -196,27 +211,14 @@
   }
 
   .tech-icon-image {
-    width: 50px;
-    height: 50px;
-  }
-
-  .fallback-icon {
-    width: 45px;
-    height: 45px;
-  }
-
-  .fallback-icon-text {
-    font-size: 16px;
-  }
-
-  .cta-text {
-    font-size: 1.75rem;
+    width: 60px;
+    height: 60px;
   }
 }
 
 @media (max-width: 768px) {
   .team__main-section {
-    padding: 4rem 0;
+    padding: 3rem 0;
   }
 
   .team__title {
@@ -224,12 +226,12 @@
   }
 
   .technologies-grid {
-    gap: 2rem;
+    gap: 3rem;
   }
 
   .tech-row {
-    gap: 2rem;
-    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
   }
 
   .tech-icon {
@@ -238,17 +240,8 @@
   }
 
   .tech-icon-image {
-    width: 40px;
-    height: 40px;
-  }
-
-  .fallback-icon {
-    width: 35px;
-    height: 35px;
-  }
-
-  .fallback-icon-text {
-    font-size: 14px;
+    width: 50px;
+    height: 50px;
   }
 
   .cta-info {
@@ -261,55 +254,25 @@
     font-size: 1.5rem;
     min-width: auto;
   }
-
-  .cta-title {
-    font-size: 1.25rem;
-  }
-
-  .cta-phone {
-    font-size: 1.125rem;
-  }
 }
 
 @media (max-width: 480px) {
-  .team__main-section {
-    padding: 3rem 0;
-  }
-
-  .team__title {
-    font-size: 1.75rem;
-  }
-
   .tech-row {
-    gap: 1.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
   }
 
   .tech-icon {
     width: 50px;
     height: 50px;
-    padding: 0.75rem;
   }
 
   .tech-icon-image {
-    width: 35px;
-    height: 35px;
-  }
-
-  .fallback-icon {
-    width: 30px;
-    height: 30px;
-  }
-
-  .fallback-icon-text {
-    font-size: 12px;
+    width: 40px;
+    height: 40px;
   }
 
   .cta-text {
     font-size: 1.25rem;
-  }
-
-  .cta-button {
-    padding: 0.875rem 1.5rem;
-    font-size: 1rem;
   }
 }

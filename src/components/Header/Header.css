@@ -8,6 +8,11 @@
   transition: all 0.3s ease;
   border-bottom: 1px solid transparent;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  padding: 5px 0;
+  margin-top: 0;
+  margin-bottom: 0;
+
 }
 
 .header--scrolled {
@@ -173,7 +178,7 @@
 
 .mobile-nav__cta .btn {
   padding: 1rem 2rem; /* Changed to match hero button size */
-  background-color: #1e88e5; /* Same color as hero button */
+  background-color: #1784e9; /* Same color as hero button */
   color: #ffffff;
   border: none;
   border-radius: 8px;
@@ -212,7 +217,8 @@
 @media (min-width: 1024px) {
   .header__content {
     padding: 1.25rem 0;
-    margin-bottom: -20px;
+    margin-bottom: -23px;
+    margin-top: -6px;
   }
   
   .logo-image {

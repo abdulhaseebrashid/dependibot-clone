@@ -2,7 +2,7 @@
   padding: 0;
   position: relative;
   overflow: hidden;
-  min-height: 700px;
+  min-height: 600px; /* Adjusted for better proportions */
 }
 
 .about__background {
@@ -11,7 +11,7 @@
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  min-height: 700px;
+  min-height: 600px; /* Adjusted for better proportions */
   display: flex;
   align-items: center;
 }
@@ -24,18 +24,25 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.6);
   z-index: 1;
-  margin-left: 100%;
+  margin-bottom: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
 }
 
 .about__content {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: 420px 1fr;
+  grid-template-columns: 400px 1fr;
   grid-template-rows: auto auto;
-  gap: 2rem 5rem;
+  gap: 3rem 4rem;
   align-items: flex-start;
   min-height: 500px;
   padding: 4rem 0;
@@ -44,38 +51,28 @@
     "bottom bottom";
 }
 
-/* Left Side - Blue Card */
+/* Left Side - Blue Card - REMOVED SHINE EFFECT */
 .about__card {
   grid-area: card;
   background: linear-gradient(135deg, #2196f3, #1976d2);
-  padding: 3rem 2.5rem;
-  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  border-radius: 15px;
   text-align: center;
   color: white;
-  box-shadow: 0 20px 40px rgba(33, 150, 243, 0.4);
+  box-shadow: 0 10px 30px rgba(33, 150, 243, 0.3);
   position: relative;
-  overflow: hidden;
-  min-height: 175px;
+  min-height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: -1rem;
-  max-width: 90%;
+  align-items: center;
+  max-width: 350px;
 }
 
-.about__card::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  right: -50%;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-  animation: float 8s ease-in-out infinite;
-}
+/* REMOVED SHINE EFFECT - No ::before pseudo-element */
 
 .about__card-icon {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   position: relative;
   z-index: 2;
   display: flex;
@@ -84,19 +81,21 @@
 }
 
 .card-icon {
-  width: 70px;
-  height: 80px;
+  width: 60px;
+  height: 55px;
   object-fit: contain;
   max-width: 100%;
   max-height: 100%;
-  filter: brightness(0) invert(1); /* Makes icon white */
+  filter: brightness(0) invert(1);
+  margin-top: 15%;
+  margin-bottom: -20%;
 }
 
-/* Fallback Icon (same as your other components) */
+/* Fallback Icon */
 .fallback-icon {
   display: none;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   justify-content: center;
   align-items: center;
   position: absolute;
@@ -107,7 +106,7 @@
 
 .fallback-icon-text {
   color: white;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
@@ -118,59 +117,60 @@
 }
 
 .about__card-text h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.3;
+  font-size: 28px;
+  font-weight: 500%;
+  line-height: 1.4;
   margin: 0;
   color: white;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* Right Side - Header Only */
+/* Right Side - Header */
 .about__header {
   grid-area: header;
   color: white;
-  max-width: 650px;
+  max-width: 600px;
   padding-top: 0;
   margin-bottom: 0;
 }
 
 .about__badge {
+  margin-left: -88px;
+  position: relative;
+  top: 85px;
   display: inline-block;
-  color: #2196f3; /* Simple blue text */
-  font-size: 1.5rem;
-  font-weight: 600;
+  color: #2196f3;
+  font-size: 26px;
+  font-weight: 500px;
   margin-bottom: 1rem;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  /* Removed: background-color, padding, border-radius, border, letter-spacing */
-  margin-top: 9%;
-  margin-left: -15%;
+  line-height: 1.3em;
+  text-shadow: 0 0 0 transparent;
   font-weight: bolder;
-  font-size: 28px;
 }
 
 .about__title {
-  font-size: 1.75rem;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 500;
   line-height: 1.2;
   margin-bottom: 0;
-  margin-top: -10px;
   color: white;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  margin-top: 9%;
   margin-left: -15%;
-  margin-top: -15px;
+  margin-top: 12%;
+  font-weight: bolder;
 }
 
 .about__title .highlight {
   color: white;
 }
 
-/* Bottom Section - Below the card */
+/* Bottom Section - Exactly as in image */
 .about__bottom {
   grid-area: bottom;
   color: white;
   margin-top: 2rem;
+  max-width: 800px;
 }
 
 .about__description {
@@ -179,51 +179,69 @@
 
 .about__description p {
   font-size: 1rem;
-  line-height: 1.7;
+  line-height: 1.6;
   color: rgba(255, 255, 255, 0.9);
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
+  font-weight: 400;
+  margin-bottom: -44px;
+  position: relative;
+  top: -47px;
 }
 
-/* Features List */
+/* Features List - Styled exactly as in image */
 .about__features {
   margin-bottom: 2rem;
-  margin-top: 0;
+  margin-top: 1.5rem;
 }
 
 .feature-item {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1rem;
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.95);
+  color: white;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-weight: 500;
+  font-weight: 600; /* Made bold as in image */
 }
 
 .feature-item:last-child {
   margin-bottom: 0;
 }
 
+/* Feature Check - SMALLER SIZE like in your image */
 .feature-check {
-  width: 24px;
-  height: 24px;
+  width: 16px; /* Made smaller */
+  height: 16px; /* Made smaller */
   background: #2196f3;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: black;
+  color: white;
   font-weight: 700;
-  font-size: 0.875rem;
+  font-size: 0.6rem; /* Made smaller */
   flex-shrink: 0;
+}
+
+/* Tick Icon - SMALLER SIZE */
+.tick-icon {
+  width: 26px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* Tick Fallback - SMALLER SIZE */
+.tick-fallback {
+  color: white;
+  font-weight: 700;
+  font-size: 0.6rem; /* Made smaller */
 }
 
 /* CTA Button */
 .about__cta {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 
 .btn {
@@ -233,7 +251,7 @@
   border: none;
   border-radius: 8px;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
   cursor: pointer;
   white-space: nowrap;
@@ -241,48 +259,67 @@
 }
 
 .btn--primary {
-  background-color: #2196f3;
+  background-color: #1784e0;
   color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
 }
 
 .btn--primary:hover {
-  background-color: #000000;
+  background-color: #1976d2;
   color: white;
 }
 
 .btn--large {
   padding: 1rem 2rem;
-  font-size: 1.125rem;
+  font-size: 16px;
+  display: inline-block;
+  box-sizing: border-box;
+  visibility: visible;
+  font-family: var(--headlinefont);
+  font-weight: 700;
+  text-shadow: 0 0 0 transparent;
+  text-align: center;
+  line-height: unset !important;
+  position: relative;
+  right: 35px;
 }
 
 /* Responsive Design */
 @media (max-width: 1024px) {
   .about__content {
-    grid-template-columns: 380px 1fr;
-    gap: 1.5rem 3rem;
+    grid-template-columns: 350px 1fr;
+    gap: 2rem 3rem;
   }
 
   .about__card {
-    padding: 2.5rem 2rem;
-    margin-top: 1.5rem;
+    padding: 2rem 1.5rem;
+    max-width: 320px;
   }
 
   .about__title {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
 
-  .fallback-icon {
-    width: 50px;
-    height: 50px;
+  .feature-check {
+    width: 15px;
+    height: 15px;
   }
 
-  .fallback-icon-text {
-    font-size: 20px;
+  .tick-icon {
+    width: 7px;
+    height: 7px;
   }
 }
 
 @media (max-width: 768px) {
+  .about {
+    min-height: 500px;
+  }
+
+  .about__background {
+    min-height: 500px;
+  }
+
   .about__content {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -296,53 +333,57 @@
   }
 
   .about__card {
-    max-width: 400px;
+    max-width: 300px;
     margin: 0 auto;
     padding: 2rem 1.5rem;
   }
 
   .about__card-text h3 {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 
   .about__header {
     max-width: none;
-    padding-top: 0;
+    text-align: center;
   }
 
   .about__title {
-    font-size: 2.25rem;
+    font-size: 2rem;
+  }
+
+  .about__bottom {
+    text-align: left;
+    max-width: none;
   }
 
   .feature-item {
-    justify-content: center;
+    justify-content: flex-start;
     text-align: left;
-    max-width: 400px;
-    margin: 1rem auto;
   }
 
   .card-icon {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
   }
 
-  .fallback-icon {
-    width: 45px;
-    height: 45px;
+  .feature-check {
+    width: 14px;
+    height: 14px;
   }
 
-  .fallback-icon-text {
-    font-size: 18px;
+  .tick-icon {
+    width: 6px;
+    height: 6px;
   }
 }
 
 @media (max-width: 480px) {
   .about {
-    min-height: 600px;
+    min-height: 450px;
   }
 
   .about__background {
-    min-height: 600px;
+    min-height: 450px;
   }
 
   .about__content {
@@ -351,38 +392,37 @@
 
   .about__card {
     padding: 1.5rem;
+    max-width: 280px;
   }
 
   .card-icon {
-    width: 50px;
-    height: 50px;
-  }
-
-  .fallback-icon {
-    width: 40px;
-    height: 40px;
-  }
-
-  .fallback-icon-text {
-    font-size: 16px;
+    width: 45px;
+    height: 45px;
   }
 
   .about__card-text h3 {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 
   .about__title {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
-}
 
-/* Animation for floating effect */
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px) rotate(0deg);
+  .about__description p {
+    font-size: 0.9rem;
   }
-  50% {
-    transform: translateY(-10px) rotate(180deg);
+
+  .feature-item {
+    font-size: 0.9rem;
+  }
+
+  .feature-check {
+    width: 13px;
+    height: 13px;
+  }
+
+  .tick-icon {
+    width: 5px;
+    height: 5px;
   }
 }
