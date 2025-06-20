@@ -12,33 +12,42 @@ const WhyUs = () => {
       title: "Strategic-Partnership",
       description:
         "We don't just build software; we build partnerships. When you choose to work with us, you're gaining a strategic ally who is dedicated to your success. We listen, we understand, and we work hand in hand with you to achieve your digital goals.",
+      fallbackText: "SP",
     },
     {
       iconSrc: icon2,
       title: "Innovation-at-the-Core",
       description:
         "Innovation is in our DNA. We constantly explore new technologies and methodologies to ensure that your digital solutions are always cutting-edge. When you work with us, you're tapping into a world of innovation that keeps you ahead of the competition.",
+      fallbackText: "IC",
     },
     {
       iconSrc: icon3,
       title: "Results-Driven",
       description:
         "We are not satisfied until you see results. Our track record of delivering successful projects speaks for itself. From improved user experiences to increased efficiency and revenue growth, we measure our success by the impact we create for your business.",
+      fallbackText: "RD",
     },
   ]
 
-  // Fallback icon component for missing icons (same as Expertise)
-  const FallbackIcon = ({ title }) => (
+  // Improved fallback icon component (same as Expertise)
+  const FallbackIcon = ({ text, title }) => (
     <div className="fallback-icon">
-      <span className="fallback-icon-text">
-        {title
-          .split(" ")
-          .map((word) => word[0])
-          .join("")
-          .slice(0, 2)}
+      <span className="fallback-icon-text" title={title}>
+        {text}
       </span>
     </div>
   )
+
+  // Handle image load error (same as Expertise)
+  const handleImageError = (e, fallbackText, title) => {
+    e.target.style.display = "none"
+    const iconContainer = e.target.parentElement
+    const fallbackDiv = iconContainer.querySelector(".fallback-icon")
+    if (fallbackDiv) {
+      fallbackDiv.style.display = "flex"
+    }
+  }
 
   return (
     <section className="why-us" id="why-us">
@@ -62,14 +71,17 @@ const WhyUs = () => {
                       src={feature.iconSrc || "/placeholder.svg"}
                       alt={`${feature.title} Icon`}
                       className="feature-icon"
-                      onError={(e) => {
-                        // Hide broken image and show fallback (same as Expertise)
-                        e.target.style.display = "none"
-                        const fallback = e.target.nextElementSibling
-                        if (fallback) fallback.style.display = "flex"
+                      onLoad={(e) => {
+                        // Image loaded successfully, hide fallback
+                        const iconContainer = e.target.parentElement
+                        const fallbackDiv = iconContainer.querySelector(".fallback-icon")
+                        if (fallbackDiv) {
+                          fallbackDiv.style.display = "none"
+                        }
                       }}
+                      onError={(e) => handleImageError(e, feature.fallbackText, feature.title)}
                     />
-                    <FallbackIcon title={feature.title} />
+                    <FallbackIcon text={feature.fallbackText} title={feature.title} />
                   </div>
                   <div className="feature-block__content">
                     <h3 className="feature-block__title">{feature.title}</h3>

@@ -78,11 +78,22 @@ const HowItWorks = () => {
                       src={step.iconSrc || "/placeholder.svg"}
                       alt={`${step.title} Icon`}
                       className="step-icon-image"
+                      onLoad={(e) => {
+                        // Image loaded successfully, hide fallback
+                        const iconContainer = e.target.parentElement
+                        const fallbackDiv = iconContainer.querySelector(".fallback-icon")
+                        if (fallbackDiv) {
+                          fallbackDiv.style.display = "none"
+                        }
+                      }}
                       onError={(e) => {
                         // Hide broken image and show fallback (same as your Expertise)
                         e.target.style.display = "none"
-                        const fallback = e.target.nextElementSibling
-                        if (fallback) fallback.style.display = "flex"
+                        const iconContainer = e.target.parentElement
+                        const fallbackDiv = iconContainer.querySelector(".fallback-icon")
+                        if (fallbackDiv) {
+                          fallbackDiv.style.display = "flex"
+                        }
                       }}
                     />
                     <FallbackIcon title={step.title} />

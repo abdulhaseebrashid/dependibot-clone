@@ -47,3 +47,15 @@ body {
 .mt-md { margin-top: var(--spacing-md); }
 .mt-lg { margin-top: var(--spacing-lg); }
 .mt-xl { margin-top: var(--spacing-xl); }
+
+
+
+/* :root {
+  --arial: 'Arial';
+  --lato: 'Lato';
+  --open-sans: 'Open Sans';
+  --montserrat: 'Montserrat';
+  --roboto: 'Roboto';
+  --headlinefont: 'Montserrat';
+  --contentfont: 'Open Sans';
+} */

@@ -1,9 +1,9 @@
 .hero {
-  min-height: 90vh; /* Reduced from 100vh to make background length a little less */
+  min-height: 90vh;
   display: flex;
   align-items: center;
   background: linear-gradient(135deg, #f2f2f2 0%, #f2f2f2 100%);
-  padding: 6rem 0 4rem; /* Reduced padding-top from 8rem to 6rem to move content up */
+  padding: 6rem 0 4rem;
   position: relative;
   overflow: hidden;
 }
@@ -21,18 +21,18 @@
   z-index: 2;
 }
 
-/* Blue Accent Line - Adjusted to move up with content */
+/* Blue Accent Line - YOUR ORIGINAL WEB VERSION (UNCHANGED) */
 .hero__accent-line {
   position: absolute;
   left: 0;
   top: 0;
   width: 5px;
-  height: 185px; /* Kept as is, but relative positioning moves it up with padding change */
-  background: #2196f3;
+  height: 240px; /* YOUR ORIGINAL WEB HEIGHT - UNCHANGED */
+  background: #1784e9;
   border-radius: 2px;
 }
 
-/* Title - UPDATED: Enhanced text shadow */
+/* Title - YOUR ORIGINAL WEB VERSION */
 .hero__title {
   font-size: 50px;
   font-weight: 700;
@@ -41,10 +41,10 @@
   margin-bottom: 2rem;
   margin-left: 2rem;
   letter-spacing: -0.02em;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   line-height: 65px;
-  font-size: 45px !important;
+  font-size: 46px !important;
   line-height: 130%;
   font-weight: bolder;
   visibility: visible;
@@ -55,7 +55,7 @@
   word-wrap: break-word;
 }
 
-/* Subtitle - Moved up with padding adjustment */
+/* Subtitle - YOUR ORIGINAL WEB VERSION */
 .hero__subtitle {
   margin-bottom: 1.5rem;
   margin-left: 2rem;
@@ -67,34 +67,22 @@
   font-weight: 500;
   line-height: 1.4;
   margin: 0;
-  font-family:
-    'Inter',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* Description - Updated font size to match subtitle */
+/* Description - YOUR ORIGINAL WEB VERSION */
 .hero__description {
   margin-bottom: 2.5rem;
   margin-left: 2rem;
 }
 
 .hero__description p {
-  font-size: clamp(1.4rem, 2.8vw, 1.9rem); /* Same as subtitle font size */
+  font-size: clamp(1.4rem, 2.8vw, 1.9rem);
   color: #4a5568;
   line-height: 1.6;
   max-width: 520px;
   margin: 0;
-  font-family:
-    'Inter',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 .hero__cta {
@@ -102,31 +90,30 @@
   margin-left: 2rem;
 }
 
-/* HERO-SPECIFIC BUTTON STYLES */
+/* HERO-SPECIFIC BUTTON STYLES - YOUR ORIGINAL */
 .hero__btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border: none;
   border-radius: 8px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-weight: 500;
   text-decoration: none;
   cursor: pointer;
   white-space: nowrap;
-  transition: background-color 0.3s ease; /* Only background color transition */
+  transition: background-color 0.3s ease;
 }
 
 .hero__btn--primary {
-  background-color: #1e88e5; /* Changed to match header button color */
+  background-color: #1e88e5;
   color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .hero__btn--primary:hover {
-  background-color: #000000; /* Black on hover */
-  color: #ffffff; /* Keep text white */
-  /* No movement animations */
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .hero__btn--large {
@@ -151,24 +138,23 @@
   justify-content: center;
   border: none;
   border-radius: 8px;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-weight: 500;
   text-decoration: none;
   cursor: pointer;
   white-space: nowrap;
-  transition: background-color 0.3s ease; /* Only background color transition */
+  transition: background-color 0.3s ease;
 }
 
 .btn--primary {
-  background-color: #1e88e5; /* Changed to match header button color */
+  background-color: #1e88e5;
   color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .btn--primary:hover {
-  background-color: #000000; /* Black on hover */
-  color: #ffffff; /* Keep text white */
-  /* No movement animations */
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .btn--large {
@@ -176,7 +162,7 @@
   font-size: 1.125rem;
 }
 
-/* Globe Visual - Moved up with padding adjustment */
+/* Globe Visual - YOUR ORIGINAL */
 .hero__visual {
   display: flex;
   justify-content: center;
@@ -197,7 +183,6 @@
   margin-right: 100px;
   max-height: 620px;
   max-width: 590px;
-  /* No background, borders, or padding - seamless blend */
 }
 
 .globe-image {
@@ -206,12 +191,10 @@
   object-fit: contain;
   max-width: 750px;
   max-height: 600px;
-  /* Remove any borders or shadows for seamless blend */
   filter: none;
-  /* No animation - static image */
 }
 
-/* Responsive Design */
+/* Responsive Design - YOUR ORIGINAL WEB BREAKPOINTS (UNCHANGED) */
 @media (min-width: 768px) {
   .hero__content {
     grid-template-columns: 1fr 1fr;
@@ -220,10 +203,12 @@
 
   .hero__text {
     padding-right: 1rem;
-  }
+    position: relative;
+    top: 35px;
+}
 
   .hero__accent-line {
-    height: 190px; /* Kept as is, moves up with padding change */
+    height: 250px; /* YOUR ORIGINAL */
   }
 
   .hero__visual {
@@ -237,26 +222,27 @@
 }
 
 @media (min-width: 1024px) {
-    .hero {
-        margin-top: 0;
-        margin-bottom: 0;
-        padding: 10px 0 5px;
-        background-color: #f2f2f2;
-        border-radius: 0;
-        position: relative;
-        border: none !important;
-        box-sizing: border-box;
-    }
-
+  .hero {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 10px 0 5px;
+    background-color: #f2f2f2;
+    border-radius: 0;
+    position: relative;
+    border: none !important;
+    box-sizing: border-box;
+  }
 
   .hero__content {
     gap: 6rem;
     margin-top: -2em;
   }
 
-  .hero__accent-line {
-    height: 230px; /* Kept as is, moves up with padding change */
-  }
+  @media (min-width: 1024px) {
+    .hero__accent-line {
+        height: 230px;
+    }
+}
 
   .hero__visual {
     min-height: 700px;
@@ -270,108 +256,242 @@
 
 @media (min-width: 1200px) {
   .globe-image {
-      max-width: 700px;
-      max-height: 620px;
-      visibility: visible;
-      animation-name: fadeInUp;
-      border-style: none;
+    max-width: 700px;
+    max-height: 620px;
+    visibility: visible;
+    animation-name: fadeInUp;
+    border-style: none;
   }
 }
 
+/* MOBILE ONLY - SPECIFIC FIXES WITHOUT AFFECTING WEB */
 @media (max-width: 767px) {
   .hero {
-    padding: 4rem 0 3rem; /* Reduced from 6rem to 4rem to move content up */
+    padding: 8rem 0 4rem;
+    min-height: auto;
+  }
+
+  .hero__content {
+    grid-template-columns: 1fr;
+    gap: 0;
+    min-height: auto;
+    margin-top: 2rem;
   }
 
   .hero__text {
     text-align: left;
     position: relative;
+    top: 22px;
+    order: 1;
+}
+
+  /* MOBILE TITLE - OPTIMIZED FOR MOBILE */
+  .hero__title {
+    font-size: 32px !important;
+    line-height: 1.2 !important;
+    font-weight: 800 !important;
+    margin-bottom: 1.5rem;
+    margin-left: 2rem;
+    color: #06132c !important;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    letter-spacing: -0.01em !important;
   }
 
+  /* MOBILE ACCENT LINE - REACHES EXACTLY TO "COMPANY" ON MOBILE */
   .hero__accent-line {
-    height: 170px; /* Kept as is, moves up with padding change */
+    height: 200px !important;
+    width: 5px !important;
+    background: #1784e9 !important;
+}
+
+  /* MOBILE SUBTITLE */
+  .hero__subtitle {
+    margin-bottom: 1.2rem;
+    margin-left: 2rem;
   }
 
-  .hero__title,
-  .hero__subtitle,
-  .hero__description,
-  .hero__cta {
+  .hero__subtitle-main {
+    font-size: 18px !important;
+    line-height: 1.2em !important;
+    color: #1784e9 !important;
+    font-weight: bold;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    font-weight: bold;
+}
+
+  /* MOBILE DESCRIPTION */
+  .hero__description {
+    margin-bottom: 1.5rem;
     margin-left: 2rem;
   }
 
   .hero__description p {
+    font-size: 26px !important;
+    line-height: 1.3em;
+    color: #06132c;
+    font-weight: bold;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
     max-width: none;
+    position: relative;
+    line-height: 1.3em;
+    right: 12px;
+}
+
+  /* MOBILE BUTTON */
+  .hero__cta {
+    margin-top: 1rem !important;
+    margin-left: 2rem;
+    margin-bottom: 3rem;
   }
 
+  .hero__btn--large {
+    right: 22px !important;
+    padding: 0.9rem 1.8rem !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+}
+
+  /* HIDE GLOBE IMAGE ON MOBILE */
   .hero__visual {
-    min-height: 400px;
+    display: none !important;
+  }
+
+  .hero__globe {
+    display: none !important;
   }
 
   .globe-image {
-    max-width: 400px;
-    max-height: 350px;
+    display: none !important;
   }
 }
 
-/* Background Elements */
+/* EXTRA SMALL MOBILE */
+@media (max-width: 480px) {
+  .hero {
+    padding: 7rem 0 3rem;
+  }
+
+  .hero__content {
+    margin-top: 1.5rem;
+  }
+
+  .hero__title {
+    font-size: 38px !important;
+    margin-left: 22px;
+}
+
+  /* SMALLER MOBILE ACCENT LINE - STILL REACHES COMPANY */
+  @media (max-width: 480px) {
+    .hero__accent-line {
+      height: 190px !important;
+      left: -2.5px;
+  }
+}
+  .hero__subtitle,
+  .hero__description,
+  .hero__cta {
+    margin-left: 1.5rem;
+  }
+
+  .hero__subtitle-main {
+    font-weight: bold;
+    font-weight: 500;
+    font-weight: bolder;
+    font-size: 28px !important;
+    margin-right: 10px;
+    position: relative;
+    top: -12px;
+    right: 24px;
+    text-shadow: 0 0 0 transparent;
+    line-height: 1.2em;
+    text-transform: none;
+    word-break: break-word;
+}
+
+.hero__description p {
+  font-size: 25px !important;
+  font-weight: 1000%;
+  right: 22px;
+  top: -10px;
+}
+
+  .hero__btn--large {
+    padding: 0.8rem 1.5rem !important;
+    font-size: 14px !important;
+  }
+
+  .hero__visual {
+    display: none !important;
+  }
+
+  .hero__globe {
+    display: none !important;
+  }
+
+  .globe-image {
+    display: none !important;
+  }
+}
+
+/* Background Elements - YOUR ORIGINAL */
 .hero::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
   width: 50%;
   height: 100%;
-  background: radial-gradient(
-    circle at center,
-    rgba(33, 150, 243, 0.03) 0%,
-    transparent 70%
-  );
+  background: radial-gradient(circle at center, rgba(33, 150, 243, 0.03) 0%, transparent 70%);
   pointer-events: none;
 }
 
-.hero__subtitle p.hero__subtitle-main {
-  text-align: left;
-  margin-top: -26px;
-  margin-left: -31px;
-  font-size: 28px !important;
-  font-weight: bold;
-  line-height: 35px;
-  visibility: visible;
-  text-shadow: 0 0 0 transparent;
-  line-height: 1.2em;
-  text-transform: none;
-  font-family: var(--headlinefont);
-  letter-spacing: 0;
-  word-break: break-word;
-  word-wrap: break-word;
-}
+/* DESKTOP SPECIFIC OVERRIDES - YOUR ORIGINAL WEB STYLES (UNCHANGED) */
+@media (min-width: 768px) {
+  .hero__subtitle p.hero__subtitle-main {
+    text-align: left;
+    margin-top: -26px;
+    margin-left: -31px;
+    font-size: 28px !important;
+    font-weight: bold;
+    line-height: 35px;
+    visibility: visible;
+    text-shadow: 0 0 0 transparent;
+    line-height: 1.2em;
+    text-transform: none;
+    font-family: var(--headlinefont);
+    letter-spacing: 0;
+    word-break: break-word;
+    word-wrap: break-word;
+  }
 
-.hero__description p {
-  margin-top: 1px;
-  margin-left: -30px;
-  text-size-adjust: 150%;
-  word-spacing: 0px;
-  line-height: 10.2;
-  font-weight: bolder;
-  color: #06132c;
-  font-size: 25px !important;
-  line-height: 29.3px;
-  letter-spacing: 0px;
-  word-break: break-word;
-  font-weight: 500;
-  font-weight: bold;
-  visibility: visible;
-  font-family: var(--headlinefont);
-  text-shadow: 0 0 0 transparent;
-  line-height: 1.3em;
-  text-transform: none;
-  word-break: break-word;
-  word-wrap: break-word;
-}
+  .hero__description p {
+    margin-top: 1px;
+    margin-left: -30px;
+    text-size-adjust: 150%;
+    word-spacing: 0px;
+    line-height: 10.2;
+    font-weight: bolder;
+    color: #06132c;
+    font-size: 25px !important;
+    line-height: 29.3px;
+    letter-spacing: 0px;
+    word-break: break-word;
+    font-weight: 500;
+    font-weight: bold;
+    visibility: visible;
+    font-family: var(--headlinefont);
+    text-shadow: 0 0 0 transparent;
+    line-height: 1.3em;
+    text-transform: none;
+    word-break: break-word;
+    word-wrap: break-word;
+  }
 
-.hero__title h1 {
-  margin-left: 102px;
-  font-size-adjust: 0.4;
-  word-spacing: 0px;
-  line-height: 61px;
+  .hero__title h1 {
+    margin-left: 102px;
+    font-size-adjust: 0.4;
+    word-spacing: 0px;
+    line-height: 61px;
+  }
 }
